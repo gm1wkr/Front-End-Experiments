@@ -183,18 +183,33 @@ a.main-navigation:visited:not(.active){
     display: flex;
     justify-content: flex-end;
 }
+
+.header-address address{
+    display: flex;
+    flex-direction: column;
+}
 .header-address a{
     color: var(--body-primary-color);
     text-decoration: none;
 }
 
 @media screen and (max-width: 800px){
+
+    .header, .header-address{
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+    }
+
     .header-content{
+        margin: auto;
+        padding-top: 1rem;
         width: 100%;
     }
 
-    .header-address{
-        display: none;
+    .header-address address{
+        display: block;
+        margin-top:1rem;
     }
 }
 
@@ -206,7 +221,7 @@ a.main-navigation:visited:not(.active){
 .hero{
     display: grid;
     grid-template-columns: 5vw 40vw 20px 60px 1fr;
-    grid-template-rows: 5vw auto 20px auto;
+    grid-template-rows: 20px auto 10px auto;
     background-color: var(--color-secondary);
     color: var(--body-primary-color);
     /* box-shadow: var(--box-shadow-large); */
@@ -215,14 +230,6 @@ a.main-navigation:visited:not(.active){
 }
 
 
-.hero::after{
-    content: ' ';
-    grid-column: 2 / 4;
-    grid-row: 2 / 4;
-    z-index: 0;
-    background-color: #2d1b17;
-    /* box-shadow: var(--box-shadow-large) */
-}
 .hero img{
     grid-column: 1 / 3;
     grid-row: 1 / 3;
@@ -230,9 +237,21 @@ a.main-navigation:visited:not(.active){
     z-index: 1;
     position: relative;
     width: 100%;
-    box-shadow: var(--box-shadow-small)
+    min-height: 100%;
+    object-fit: cover;
+    box-shadow: var(--box-shadow-large);
+    filter: drop-shadow(0 -3px -4px 6px rgb(0, 0, 0));
 }
 
+.hero::after{
+    content: ' ';
+    grid-column: 2 / 4;
+    grid-row: 1 / 5;
+    z-index: 0;
+    background-color: #2d1b17;
+    opacity: 0.6;
+    /* box-shadow: var(--box-shadow-large) */
+}
 .hero-content{
     grid-column: 5;
     grid-row: 2 / -1;
@@ -265,7 +284,7 @@ a.main-navigation:visited:not(.active){
 
 section.menu-panel{
     background-color: var(--body-background);
-    color: #f1d4b0;
+    color: #ecd6ba;
     box-shadow: var(--box-shadow-large);
     background: var(--gradient-1);
 }
@@ -284,8 +303,8 @@ section.menu-panel{
 .panel-header p{
     max-width: 90ch;
     margin: 0 5vw 0 0;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
     font-weight: 200;
     letter-spacing: 0.043em;;
 }
@@ -340,6 +359,7 @@ section.menu-panel{
 }
 
 .panel-image .caption{
+    box-sizing: border-box;
     position: absolute;
     top: -100%;
     left: 0%;
