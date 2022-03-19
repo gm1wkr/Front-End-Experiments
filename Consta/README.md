@@ -1,14 +1,14 @@
 # Consta Patio Bistro Code Sprint
-Personal challange to code a small website from the ground up in two days.  Emphasis on practicing CSS skills and becoming more comfy with Grid and Flex.
+Personal challange to code a small website wireframe/template from the ground up in two days.  Emphasis on practicing CSS skills and becoming more comfy with Grid and Flex.  The secondary goal is to practice self critism and work out what could be done in an iterative fashion.  Do I have FE dev potential?
 
 The challange is to replicate the overall feel of [Rachel Andrews' CodePen Demo](https://codepen.io/jlengstorf/pen/wvaQXEr) but with my own spin.
 
 Code will be hand written and use no frameworks.  
 
 ## The Fictional Bistro
-__Consta Patio Bistro__ is the type of place that serves food on slate and is frequented by young groovy people who wear Beats headphones while slurping on a smoothy.  
+__Consta Patio Bistro__ is the type of place that serves food on slate and is frequented by young groovy people who wear Beats headphones while slurping on a smoothy.  They are hip, they are cool and they are really lovely people.
 
-__The fictional owners, Bob and Maria, are dedicated to their craft and have wicked senses of humour (they told me to make the placeholder text like that, honestly).__
+__The fictional owners, Bob and Maria, are dedicated to their craft, love their customers and each have a wicked sense of humour (they insisted the wireframe placeholders are humorous, honestly!).__
 
 ## TODO's
 
@@ -16,7 +16,7 @@ Having spent the time budget (and more) the state of play is okay but has plenty
 
 ## Things to improve
 * Improve CSS to be less verbose
-* Tidy up CSS class names and rationise overly verbose selectors.
+* Tidy up CSS class names and rationise selectors.
     * Consider using SCSS
     * Consider using loose BEM convention
 * Prepare for Web components
@@ -35,7 +35,7 @@ The page feels too boxy, a curve would not go amiss but will complicate the mark
     * Responsive text size (regardless of breakpoints)
     * Limit width on Large screens (<1920px>)
     * Typography is unbalanced
-    * Z stacking can be improved (more material design)
+    * Z stacking can be improved (more material design?)
         * It is currently confussed
 
 ### Navigation
@@ -47,7 +47,7 @@ The page feels too boxy, a curve would not go amiss but will complicate the mark
 * Make better use of header on wide screen (address maybe)
 
 ### Hero Section
-The Hero section does replicate the original design but the pseudo element beneath the hero image does not add to the design much.  A subtle curve may have worked better?
+The Hero section does replicate the original design but the pseudo element beneath the hero image does not add to the design much.  A subtle curve or an image clip path may have worked better?
 
 * remove the offset border pseudo element.
 * balance whole section vertically
