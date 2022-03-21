@@ -1,6 +1,3 @@
-// https://reactjs.org/tutorial/tutorial.html#inspecting-the-starter-code
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -18,7 +15,7 @@ class Square extends React.Component {
       return (
         <button 
             className="square" 
-            onClick={() => this.setState({value:'✔'})}
+            onClick={() => this.setState({value:'🍓'})}
         >
           {this.state.value}
         </button>
