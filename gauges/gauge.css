@@ -1,5 +1,5 @@
 :root {
-    --gauge-background: #dbcfcf;
+    --gauge-background: #252525;
     --gauge-body-bg: #202020;
     --gauge-primary: #dbdbdb;
     --gauge-text-color: var(--gauge-primary);
@@ -8,7 +8,7 @@
     --gauge-border: #8b8b8b;
     --gauge-text-color: var(--gauge-primary);
     --gauge-border: 1px solid #505050;
-    --gauge-pointer-color: #000; 
+    --gauge-pointer-color: rgb(255, 255, 255); 
 }
 
 
@@ -70,7 +70,7 @@ body {
     /* background-color: var(--gauge-body-bg); */
     /* display: grid;
     place-content: center;*/
-    transform: translateY(-0.8em); 
+    transform: translateY(-0.48em); 
 }
 
 .label-text {
@@ -146,6 +146,6 @@ body {
     /* border: var(--gauge-border); */
     background-color: #111111;
     /* color: rgba(255, 255, 255, 0.795); */
-    font-size: 1.20em;
+    font-size: 1.00em;
     
 }

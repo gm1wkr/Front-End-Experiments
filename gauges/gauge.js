@@ -53,7 +53,7 @@ function updateGauge(el,value){
     let valueDegrees = Math.round(mapRange(value, 1, 100, 1, 120));
     // el.querySelector(".gauge__fill").style.filter = `hue-rotate(${valueDegrees}deg)`;
 
-    const bgColor = v => `hsl(${( (1-v) * 120)}, 60%, 55%)`;
+    const bgColor = v => `hsl(${( (1-v) * 120)}, 80%, 25%)`;
     el.querySelector(".gauge__fill").style.backgroundColor = bgColor(value);
     console.log(`${valueDegrees} -> ${value}  ${bgColor(value)}`);
 }
