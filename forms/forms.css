@@ -1,0 +1,108 @@
+:root{
+    --accent-color: #695f5e;
+}
+
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 80vw;
+    margin:auto;
+    background-color: rgb(255, 246, 220);
+}
+
+form {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:auto;
+    max-width: 40em;
+}
+
+fieldset{
+    min-width: 200px;
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: 1px solid #ccc;
+    border-radius: .4em;
+    background-color: rgb(245, 255, 252);
+}
+
+.form__horizontal fieldset {
+    padding: 0 1em;
+    margin: 0;
+}
+
+
+legend {
+    font-size: 1.3em;
+    color: var(--accent-color);
+}
+
+label {
+    min-width: 6em;
+    display:block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.1;
+
+}
+
+.form__horizontal label {
+    display: inline;
+    min-width: 4em;
+    margin-right: 1em;
+}
+
+label:first-of-type{
+    margin-top: 0;
+}
+
+.form__input input, .form__input select {
+    padding: .6em;
+    width: 100%;
+}
+
+.form__horizontal input {
+    padding:0.3em;
+}
+
+input, select, textbox {
+    border: 1px solid var(--accent-color);
+}
+
+.form__input{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+
+}
+
+.form__control{
+    /* display: grid;
+    place-content: start; */
+    margin-top: 2em;
+    padding-left: 6em;
+}
+
+.form__control label{
+    
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    align-items: center;
+    margin-top: 0.4em;
+    margin-left: 1em;
+}
+
+
+
+textarea {
+    width: 100%;
+}
+
+

@@ -1,0 +1,151 @@
+:root {
+    --gauge-background: #dbcfcf;
+    --gauge-body-bg: #202020;
+    --gauge-primary: #dbdbdb;
+    --gauge-text-color: var(--gauge-primary);
+    --gauge-body-background: #161616;
+    --gauge-slider-bg: #222427;
+    --gauge-border: #8b8b8b;
+    --gauge-text-color: var(--gauge-primary);
+    --gauge-border: 1px solid #505050;
+    --gauge-pointer-color: #000; 
+}
+
+
+
+body {
+
+    background-color: #0c0903;
+}
+
+.wrapper {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+#gauges {
+    background-color: var(--gauge-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+
+    display: grid;
+    gap: 4em;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 1rem;
+}
+
+.gauge {
+    min-width: 180px;
+    max-width: 220px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1remx;
+    /* margin-right: 10px;
+    margin-bottom: 50px; */
+    /* background-color: var(--gauge-body-bg); */
+    /* border: var(--gauge-border); */
+    /* padding: 0.8em; */
+}
+
+
+.gauge__body {
+    width: 100%;
+    /* height: 0; */
+    padding-bottom: 50%;
+    /* background: var(--gauge-slider-bg); */
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+
+
+.label {
+    min-width: 160px;
+    max-width: 240px;
+    /* padding: 2em auto; */
+    text-align: center;
+    color: var(--gauge-text-color);
+    /* background-color: var(--gauge-body-bg); */
+    /* display: grid;
+    place-content: center;*/
+    transform: translateY(-0.8em); 
+}
+
+.label-text {
+    display: block;
+    background: rgba(0, 0, 0);
+    padding: 1em;
+    letter-spacing: 0.033em;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+
+}
+
+
+.gauge__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: transparent;
+    border-top: 3px solid var(--gauge-pointer-color);
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.5s  cubic-bezier(0.37, 0.99, 1, 0.98) 0s;
+}
+
+.gauge__cover {
+    font-size: 1.4rem;
+    ;
+    width: 75%;
+    height: 150%;
+    background: transparent;
+    color: var(--gauge-text-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+}
+
+
+
+.gauge__cover .dial {
+    /* background-color: var(--gauge-slider-bg); */
+    background: rgba(0, 0, 0, 0.63);
+
+    width: 100%;
+    height: 0;
+    padding-bottom: 63%;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    position: relative;
+
+    
+    /* border: var(--gauge-border);  */
+    
+}
+
+.gauge__cover .dial span {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    overflow: hidden;
+    transform: translateX(-50%);
+    margin-top: 0.7em;
+    padding: 6px 8px;
+    /* border: var(--gauge-border); */
+    background-color: #111111;
+    /* color: rgba(255, 255, 255, 0.795); */
+    font-size: 1.20em;
+    
+}

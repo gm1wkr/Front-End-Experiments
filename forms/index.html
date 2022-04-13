@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Login</h2>
+    <div>
+        <form class="form__horizontal" action="post" name="login">
+            <fieldset>
+                <label for="username">User: </label>
+                <input type="text" name="username" id="username">
+                
+                <label for="password">Pass: </label>
+                <input type="text" name="password" id="password">
+                
+                <input type="submit" value="Go">
+            </fieldset>
+        </form>
+    </div>
+
+    <h2>Generic</h2>
+    <div class="">
+
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" name="addUser">
+    
+            <fieldset>
+                <legend>Formity Form</legend>
+                <div class="form__input">
+                    <label for="user">User</label>
+                    <input type="text" name="user" placeholder="New User" id="" required>
+                </div>
+        
+                <div class="form__input">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" placeholder="Email" id="" required>
+                </div>
+        
+                <div class="form__input">
+                    <label for="password">password</label>
+                    <input type="text" name="password" placeholder="password" id="" required>
+                </div>
+        
+                <div class="form__input">
+                    <label for="level">Level</label>
+                    <select name="level" id="">
+                        <option value="1">1 - Standard User</option>
+                        <option value="2">2 - Elevated User</option>
+                        <option value="3">3 - Basic Admin User</option>
+                        <option value="4">4 - Admin User</option>
+                    </select>
+                </div>
+
+                <div class="form__input">
+                    <label for="textarea">Text</label>
+                    <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+                </div>
+                
+                <div class="form__control">
+                    <p>Select from the list by making a selection from the list.</p>
+                    <label for="html">
+                        <input type="radio" id="html" name="fav_language" value="HTML" checked>HTML
+                    </label>
+
+                    
+                    <label for="css">
+                        <input type="radio" id="css" name="fav_language" value="CSS"> CSS
+                    </label>
+
+                    
+                    <label for="javascript">
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">JavaScript
+                    </label>
+
+                    
+                    <label for="python">
+                        <input type="radio" id="python" name="fav_language" value="JavaScript">Python
+                    </label>
+                </div>
+
+                <div class="form__control">
+                    <p>Choose many items by checking many items.</p>
+                        
+                        <label for="Checkity">
+                            <input type="checkbox" id="Checkity" name="Checkity" checked>Checkity
+                        </label>
+                        <label for="Checkity2">
+                            <input type="checkbox" id="Checkity2" name="Checkity2">Checkity
+                        </label>
+                        <label for="Checkity3">
+                            <input type="checkbox" id="Checkity3" name="Checkity3" checked>Checkity
+                        </label>
+                      
+
+                </div>
+
+
+                <div class="form__input">
+                    <label></label>
+                    <input type="submit" />
+                </div>
+            </fieldset>
+        
+        
+        
+        
+        </form>
+    </div>
+
+</body>
+</html>
