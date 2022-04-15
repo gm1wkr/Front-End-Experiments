@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="theme.css">
+    <title>Theme Switch Experimental</title>
+
+
+
+</head>
+
+<body>
+
+    <header>
+        
+            <form class="form__horizontal" action="post" name="login">
+                <fieldset>
+                    <label for="username">User: 
+                        <input type="text" name="username" id="username">
+                    </label>
+                    
+                    <label for="password">Pass: 
+                        <input type="text" name="password" id="password">
+                    </label>
+                    
+                    <input type="submit" value="Go">
+                </fieldset>
+            </form>
+        
+        
+
+        <!-- <form id="theme-switcher" class="form__horizontal">
+            <div>
+                <input checked type="radio" id="auto" name="theme" value="auto">
+                <label for="auto">Auto</label>
+            </div>
+            <div>
+                <input type="radio" id="light" name="theme" value="light">
+                <label for="light">Light</label>
+            </div>
+            <div>
+                <input type="radio" id="dark" name="theme" value="dark">
+                <label for="dark">Dark</label>
+            </div>
+            <div>
+                <input type="radio" id="dim" name="theme" value="dim">
+                <label for="dim">Dim</label>
+            </div>
+        </form> -->
+
+        <form class="form__horizontal">
+            <label for="theme-switcher">Theme: 
+                <select name="theme" id="theme-switcher">
+                    <option value="auto">System</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="dim">Dim</option>
+                </select>
+            </label>
+        </form>
+
+    
+
+    </header>
+    
+    <main>
+        <section>
+        <div class="surface-samples">
+            <div class="surface1 rad-shadow">1</div>
+            <div class="surface2 rad-shadow">2</div>
+            <div class="surface3 rad-shadow">3</div>
+            <div class="surface4 rad-shadow">4</div>
+        </div>
+        </section>
+    
+        <section>
+        <div class="text-samples">
+            <h1 class="text1">
+            <span class="swatch brand rad-shadow"></span>
+            Brand
+            </h1>
+            <h1 class="text1">
+            <span class="swatch text1 rad-shadow"></span>
+            Text Color 1
+            </h1>
+            <h1 class="text2">
+            <span class="swatch text2 rad-shadow"></span>
+            Text Color 2
+            </h1>
+            <br>
+            <p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="text2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        </section>
+    
+    </main>
+    
+        <section>
+            <form action="" method="post" name="addUser">
+                <fieldset class="rad-shadow">
+                    <legend>Formity Form</legend>
+                    <div class="form__input">
+                        <label for="user">User</label>
+                        <input type="text" name="user" placeholder="New User" id="" required>
+                    </div>
+            
+                    <div class="form__input">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" placeholder="Email" id="" required>
+                    </div>
+            
+                    <div class="form__input">
+                        <label for="password">password</label>
+                        <input type="text" name="password" placeholder="password" id="" required>
+                    </div>
+            
+                    <div class="form__input">
+                        <label for="level">Level</label>
+                        <select name="level" id="">
+                            <option value="1">1 - Standard User</option>
+                            <option value="2">2 - Elevated User</option>
+                            <option value="3">3 - Basic Admin User</option>
+                            <option value="4">4 - Admin User</option>
+                        </select>
+                    </div>
+                    <div class="form__input">
+                        <label for="textarea">Text</label>
+                        <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+                    </div>
+            
+                    <div class="form__control">
+                        <p>Select from the list by making a selection from the list.</p>
+                        <label for="html">
+                            <input type="radio" id="html" name="fav_language" value="HTML" checked>HTML
+                        </label>
+            
+                        <label for="css">
+                            <input type="radio" id="css" name="fav_language" value="CSS"> CSS
+                        </label>
+            
+                        <label for="javascript">
+                            <input type="radio" id="javascript" name="fav_language" value="JavaScript">JavaScript
+                        </label>
+            
+                        <label for="python">
+                            <input type="radio" id="python" name="fav_language" value="JavaScript">Python
+                        </label>
+                    </div>
+                    <div class="form__control">
+                        <p>Choose many items by checking many items.</p>
+            
+                            <label for="Checkity">
+                                <input type="checkbox" id="Checkity" name="Checkity" checked>Checkity
+                            </label>
+                            <label for="Checkity2">
+                                <input type="checkbox" id="Checkity2" name="Checkity2">Checkity
+                            </label>
+                            <label for="Checkity3">
+                                <input type="checkbox" id="Checkity3" name="Checkity3" checked>Checkity
+                            </label>
+            
+                    </div>
+                    <div class="form__input">
+                        <label></label>
+                        <input type="submit" />
+                    </div>
+                </fieldset>
+             </form>
+        </section>
+
+
+
+    
+
+
+    <script>
+        const switcher = document.querySelector('#theme-switcher');
+        const doc = document.firstElementChild;
+    
+        // switcher.addEventListener('input', (e) =>
+        // setTheme(e.target.value));
+
+        switcher.addEventListener('change', (e) =>
+        setTheme(e.target.value));
+    
+        const setTheme = (theme) =>
+        doc.setAttribute('color-scheme', theme);
+    </script>
+
+</body>
+</html>

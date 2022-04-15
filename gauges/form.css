@@ -1,26 +1,11 @@
-:root{
-    --accent-color: #695f5e;
-}
 
-
-*,
-*:before,
-*:after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body{
-    max-width: 80vw;
-    margin:auto;
-    background-color: rgb(255, 246, 220);
-}
 
 form {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --form-fieldset-bg: var(--surface2);
+    --form-input-bg: var(--surface4);
     margin:auto;
     max-width: 40em;
+
 }
 
 fieldset{
@@ -29,12 +14,16 @@ fieldset{
     padding: 1em 2em;
     border: 1px solid #ccc;
     border-radius: .4em;
-    background-color: rgb(245, 255, 252);
+    background-color: var(--form-fieldset-bg);
+    color:var(--text2);
 }
 
 .form__horizontal fieldset {
-    padding: 0 1em;
+    border:0;
+    padding: 0.6rem 1em;
     margin: 0;
+    display: flex;
+    gap: 2ch;
 }
 
 
@@ -54,11 +43,15 @@ label {
 .form__horizontal label {
     display: inline;
     min-width: 4em;
-    margin-right: 1em;
+    
 }
 
 label:first-of-type{
     margin-top: 0;
+}
+
+input {
+    background-color: var(--form-input-bg);
 }
 
 .form__input input, .form__input select {
@@ -70,14 +63,27 @@ label:first-of-type{
     padding:0.3em;
 }
 
+.form__horizontal select {
+    padding:0.3em;
+}
+
 input, select, textbox {
     border: 1px solid var(--accent-color);
+    background-color: var(--form-input-bg);
+}
+
+select {
+    padding: 3rem 0;
+}
+
+input[type="submit"]{
+    background-color: var(--surface4);
 }
 
 .form__input{
     display: flex;
     align-items: center;
-    margin-top: 1em;
+    margin-top: 2.6ch;
 
 }
 
@@ -102,6 +108,7 @@ input, select, textbox {
 
 textarea {
     width: 100%;
+    background-color: var(--form-input-bg);
 }
 
 
