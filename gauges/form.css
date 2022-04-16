@@ -1,10 +1,14 @@
 
 
 form {
-    --form-fieldset-bg: var(--surface2);
-    --form-input-bg: var(--surface4);
+    --form-fieldset-bg: var(--surface1);
+    --form-input-bg: var(--surface3);
+
+    --form-input-focus-bg: var(--surface1);
+    --form-accent-color: var(--text2);
     margin:auto;
     max-width: 40em;
+    font-size: 1.4rem;
 
 }
 
@@ -18,8 +22,15 @@ fieldset{
     color:var(--text2);
 }
 
+form.form__horizontal{
+    width: max-content;
+    font-size: 1rem;
+    margin: 0;
+}
+
 .form__horizontal fieldset {
     border:0;
+    background: transparent;
     padding: 0.6rem 1em;
     margin: 0;
     display: flex;
@@ -28,13 +39,12 @@ fieldset{
 
 
 legend {
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
 }
 
 label {
-    min-width: 6em;
+    min-width: 8rem;
     display:block;
-    font-size: 1.1rem;
     font-weight: bold;
     line-height: 1.1;
 
@@ -52,7 +62,17 @@ label:first-of-type{
 
 input {
     background-color: var(--form-input-bg);
+    accent-color: var(--form-accent-color);
+    /* border-radius: 0.4rem; */
 }
+
+textarea:focus, input:focus{
+    background-color: var(--form-input-focus-bg);
+    border: 1px solid var(--surface4);
+    outline: none;
+    /* border:1px solid #f00; */
+}
+
 
 .form__input input, .form__input select {
     padding: .6em;
@@ -68,8 +88,9 @@ input {
 }
 
 input, select, textbox {
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--surface1);
     background-color: var(--form-input-bg);
+    accent-color: var(--form-accent-color);
 }
 
 select {
@@ -91,7 +112,7 @@ input[type="submit"]{
     /* display: grid;
     place-content: start; */
     margin-top: 2em;
-    padding-left: 6em;
+    padding-left: 8rem;
 }
 
 .form__control label{
@@ -109,6 +130,8 @@ input[type="submit"]{
 textarea {
     width: 100%;
     background-color: var(--form-input-bg);
+    border: 1px solid var(--surface1);
+    font-size: 1.2rem;
 }
 
 

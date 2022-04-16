@@ -6,8 +6,8 @@ const rawData = [
     {"sid": "Roasting", "value": .7},
     {"sid": "cChilli", "value": .3},
     {"sid": "Balmy", "value": .6},
-    {"sid": "Unity", "value": 1},
-    {"sid": "Zero", "value": .0},
+    {"sid": "Unity", "value": .99},
+    {"sid": "Zero", "value": 0.02},
 ]
 
 
@@ -23,9 +23,9 @@ rawData.forEach(function(num){
                     <span class="dial"><span>${num.value}</span></span>
                 </div>
             </div>
-            <div class="label">
-                <span class="label-text">Some text</span>
-            </div>
+        </div>
+        <div class="label">
+            <span class="label-text">Some text</span>
         </div>
     `;
 
@@ -52,7 +52,7 @@ function updateGauge(el,value){
     let valueDegrees = Math.round(mapRange(value, 1, 100, 10, 110));
     // el.querySelector(".gauge__fill").style.filter = `hue-rotate(${valueDegrees}deg)`;
 
-    const bgColor = v => `hsl(${( (1-v) * 200)}, 90%, 35%)`;
+    const bgColor = v => `hsl(${( (1-v) * 200)}, 90%, 45%)`;
     el.querySelector(".gauge__fill").style.backgroundColor = bgColor(value);
     // console.log(`${valueDegrees} -> ${value}  ${bgColor(value)}`);
 }

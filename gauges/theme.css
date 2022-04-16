@@ -8,7 +8,7 @@
 
 html {
     /* accent color  */
-    --accent-hue: 210;
+    --accent-hue: 243;
     --accent-saturation: 100%;
     --accent-lightness: 50%;
   
@@ -32,12 +32,12 @@ html {
 
     --text1-dark: hsl(var(--accent-hue) 15% 85%);
     --text2-dark: hsl(var(--accent-hue) 5% 65%);
-    --surface1-dark: hsl(var(--accent-hue) 10% 10%);
-    --surface2-dark: hsl(var(--accent-hue) 10% 15%);
-    --surface3-dark: hsl(var(--accent-hue) 5%  20%);
+    --surface1-dark: hsl(var(--accent-hue) 8% 8%);
+    --surface2-dark: hsl(var(--accent-hue) 10% 10%);
+    --surface3-dark: hsl(var(--accent-hue) 5%  15%);
     --surface4-dark: hsl(var(--accent-hue) 5% 25%);
     --surface-shadow-dark: var(--accent-hue) 50% 3%;
-    --shadow-strength-dark: .8;
+    --shadow-strength-dark: .5;
   
     /* dim scheme  */
     --accent-dim: hsl(
@@ -202,6 +202,10 @@ html {
   header {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 7rem;
+    max-height: 25vmin;
   }
   
   form {
