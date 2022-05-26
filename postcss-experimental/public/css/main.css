@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(255, 166, 0);
+    max-width: 86vw;
+    margin: 0 auto;
+}
+
+
+h1{
+    background-color: #fafafa
+}
+
+
+h1 small{
+        font-size: 1rem;
+    }
+
+
+.class{
+    font-size: 4rem;
+}
+
+
+.class .mod{
+        font-size: 2rem;
+    }
+
+
+@media(max-width: 70rem){
+    body{
+        background-color: yellow;
+        max-width: 96vw;
+    }
+}
+

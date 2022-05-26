@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+:root {
+  --dark-color: #c37efc;
+  --light-color: #5bdef8;
+
+  --petal-hub: #00ff0d;
+  --petal1: #ffc400;
+  --petal2: #ff8800;
+  --petal3: #ff5e00;
+  --petal4: #00a508;
+  --petal5: #ff004c;
+  --petal6: #804901;
+
+  --text1: rgb(255, 212, 147);
+  --text1_shadow: 0 1px 1rem var(--petal6);
+
+  --box-shadow-color: #000000;
+  --box-shadow:  3px 3px 16px 10px #000000;
+
+  --flower-animation-time: 30s;
+}
+
+*{
+  padding:0;
+  margin: 0;
+}
+
+html {
+  font-family: Montserrat, system-ui;
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #111111;
+}
+
+.wrapper {
+  max-width: 86vw;
+  margin: auto;
+  background-color: #202020;
+  color: #c4c4c4;
+  font-size: 2rem;
+}
+
+svg {
+  cursor: pointer;
+}
+
+.svg-frame {
+  max-width: 200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.frame-caption {
+  position: absolute;
+  top: 66%;
+  width: 100%;
+  height: auto;
+  font-size: 4rem;
+  color: var(--text1);
+  text-shadow: var(--text1_shadow);
+  text-align: center;
+  
+}
+
+#darkGroup {
+  fill: var(--dark-color);
+}
+
+#lightGroup {
+  fill: var(--light-color);
+}
+
+#dark1,
+#light1,
+#dark2 {
+  transition: all 1s ease;
+}
+
+#dark2 {
+  transform: translateX(-100%);
+}
+
+svg:hover #light1 {
+  transform: translateX(10%);
+}
+
+svg:hover #dark1 {
+  transform: translateX(40%);
+  opacity: 0;
+}
+
+svg:hover #dark2 {
+  transform: translateX(0%);
+}
+
+#flower {
+  width: 100%;
+  height: 100%;
+}
+
+#petals {
+  opacity: 1;
+  fill: var(--petal1);
+  animation-duration: var(--flower-animation-time);
+  animation-name: fadeInOut;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+}
+
+#petals2 {
+  opacity: 1;
+  fill: var(--petal3);
+  animation-duration: var(--flower-animation-time);
+  animation-name: fadeOutIn;
+  animation-iteration-count: infinite;
+  stroke: var(--petal6);
+  stroke-width: 1px;
+}
+
+#petalHub {
+  width: 100%;
+  height: 100%;
+  fill: var(--petal6);
+  /* animation-duration: var(--flower-animation-time);
+  animation-name: colorSwap;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+}
+
+/* svg:hover #petals {
+    fill: var(--petal3);
+    opacity: 0;
+}
+
+svg:hover #petals2 {
+    fill: var(--petal5);
+    opacity: 1;
+}
+
+svg:hover #petalHub {
+    fill: var(--petal3);
+    opacity: 1;
+} */
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.1;
+  }
+  25%{
+    opacity: .2;
+  }
+  50% {
+    opacity: .4;
+  }
+
+  75% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes fadeOutIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes colorSwap {
+  0% {
+    fill: var(--petal1);
+  }
+
+  100% {
+    fill: var(--petal2);
+  }
+}

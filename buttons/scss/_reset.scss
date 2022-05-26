@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;/* ADDED mrl*/
+    padding:0; /* ADDED mrl*/
+}
+
+
+
+ol, ul, menu {
+    list-style: none;
+}
+
+
+img {
+    max-width: 100%;
+}

@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+:root {
+  --body-background: #000;
+  --accent: #0066ff;
+  --accent-dark: #00b5ff;
+  --text1: rgb(223, 223, 223);
+  --text2: rgb(177, 177, 177);
+  --text3: rgb(65, 65, 65);
+  --surface-zero: #000;
+  --surface1: #111;
+  --surface2: #222;
+  --surface3: #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  /* ADDED mrl*/
+  padding: 0;
+  /* ADDED mrl*/
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  min-height: 100%;
+  font-size: 62.5%;
+  /*  Set 1 rem to 10px */
+}
+
+body {
+  background-color: var(--surface-zero);
+  font-family: system-ui, roboto;
+  letter-spacing: 0.16rem;
+  color: var(--text1);
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 2rem;
+  margin-left: 4vw;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 300;
+}
+
+.wrapper {
+  min-height: 80vh;
+  max-width: 92vw;
+  margin: 0 auto;
+  background-color: var(--surface1);
+  border-radius: 1rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+}
+
+button {
+  transition: gradient 1s ease-in-out;
+}
+
+.button {
+  --button-bg2: var(--accent-dark);
+  --button-primary: rgb(252, 182, 53);
+  --button-primary2: rgb(252, 142, 53);
+  min-width: max-content;
+  max-width: 40vw;
+  padding: 0.4rem 2rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  background: var(--accent);
+  background: linear-gradient(180deg, var(--accent-dark) 23%, var(--accent) 77%);
+  color: var(--text1);
+}
+.button:hover {
+  background: linear-gradient(180deg, var(--accent-dark) 40%, var(--accent) 80%);
+  color: var(--text3);
+}
+.button__primary {
+  background: linear-gradient(180deg, var(--button-primary) 23%, var(--button-primary2) 77%);
+  color: var(--text3);
+}
+
+.gradient-buttons button.gradient__button {
+  cursor: pointer;
+  position: relative;
+  height: 50px;
+  width: 280px;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  letter-spacing: 0.2em;
+  overflow: hidden;
+  box-shadow: 0 4px 12px 0 rgb(152, 160, 180);
+}
+.gradient-buttons button.gradient__button div {
+  position: absolute;
+  background-image: linear-gradient(to right, #E040FB, #00BCD4);
+  background-size: 150% 150%;
+  height: 70px;
+  width: 420px;
+  border-radius: 5px;
+  margin: -40px 0 0 -140px;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+.gradient-buttons button.gradient__button:hover .gradient__button-fill {
+  animation: gradient 3s ease infinite;
+}
